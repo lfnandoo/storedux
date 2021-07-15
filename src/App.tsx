@@ -1,13 +1,13 @@
-import NavBar from "./containers/NavBar";
+import { NavBar } from "./containers/NavBar";
 import Products from "./containers/Products";
-import "./App.css";
+import { Header } from "./App.styles";
 
 const App: React.FC = () => {
   return (
     <>
-      <header>
+      <Header.Container>
         <NavBar />
-      </header>
+      </Header.Container>
       <main>
         <Products />
       </main>
