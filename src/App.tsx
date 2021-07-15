@@ -1,4 +1,5 @@
 import NavBar from "./containers/NavBar";
+import Products from "./containers/Products";
 import "./App.css";
 
 const App: React.FC = () => {
@@ -7,6 +8,9 @@ const App: React.FC = () => {
       <header>
         <NavBar />
       </header>
+      <main>
+        <Products />
+      </main>
     </>
   );
 };
