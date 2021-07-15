@@ -1,14 +1,13 @@
 import { DATA } from "../../mocks/data";
 import Card from "./components/Card";
+import * as Styles from "./styles";
 
-const Products: React.FC = () => {
+export const Products: React.FC = () => {
   return (
-    <ul>
+    <Styles.ProductsList>
       {DATA.map((item) => {
         return <Card item={item} />;
       })}
-    </ul>
+    </Styles.ProductsList>
   );
 };
-
-export default Products;

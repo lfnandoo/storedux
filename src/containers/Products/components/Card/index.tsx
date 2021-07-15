@@ -1,4 +1,5 @@
 import { Product } from "../../../../types/products/product";
+import * as Styles from "./styles";
 
 interface ICard {
   item: Product;
@@ -7,17 +8,17 @@ interface ICard {
 const Card: React.FC<ICard> = ({ item }) => {
   const { image, name, price } = item;
   return (
-    <li className="card">
-      <img src={image} alt={name} />
+    <Styles.CardContainer>
+      <Styles.CardImage src={image} alt={name} />
 
-      <div className="card-content">
-        <div className="card-content-info">
+      <Styles.CardContent>
+        <Styles.CardInfo>
           <h3>{name}</h3>
           <strong>${price}</strong>
-        </div>
+        </Styles.CardInfo>
         <button>Adicionar no carrinho</button>
-      </div>
-    </li>
+      </Styles.CardContent>
+    </Styles.CardContainer>
   );
 };
 

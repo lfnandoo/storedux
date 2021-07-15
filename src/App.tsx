@@ -1,16 +1,16 @@
 import { NavBar } from "./containers/NavBar";
-import Products from "./containers/Products";
-import { Header } from "./App.styles";
+import { Products } from "./containers/Products";
+import * as Styles from "./App.styles";
 
 const App: React.FC = () => {
   return (
     <>
-      <Header.Container>
+      <Styles.HeaderContainer>
         <NavBar />
-      </Header.Container>
-      <main>
+      </Styles.HeaderContainer>
+      <Styles.MainContainer>
         <Products />
-      </main>
+      </Styles.MainContainer>
     </>
   );
 };
