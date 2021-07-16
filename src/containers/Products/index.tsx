@@ -3,7 +3,7 @@ import Card from "./components/Card";
 import { DATA } from "../../mocks/data";
 import { Product } from "../../types/products/product";
 import { cartActions } from "../../redux/Cart.store";
-import { useAppDispatch } from "../../hooks/redux";
+import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 
 import * as Styles from "./styles";
 
