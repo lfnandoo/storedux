@@ -4,3 +4,8 @@ export interface Product {
   price: string;
   image: string;
 }
+
+export interface ProductInCart {
+  product: Product;
+  amount: number;
+}
