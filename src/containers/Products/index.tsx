@@ -36,8 +36,6 @@ export const Products: React.FC = () => {
     [dispatch]
   );
 
-  console.log(cartProducts);
-
   return (
     <Styles.ProductsList>
       {isLoading && !products.length && (

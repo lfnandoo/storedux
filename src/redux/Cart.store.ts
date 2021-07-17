@@ -20,6 +20,9 @@ const cart = createSlice({
         }
       ]
     },
+    clear: (state) => {
+      state.products = []
+    }
   }
 })
 
