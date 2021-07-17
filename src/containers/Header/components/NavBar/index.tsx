@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import { Button } from "../../components/Button";
-import { useAppDispatch, useAppSelector } from "../../hooks/redux";
-import { cartActions } from "../../redux/Cart.store";
+import { Button } from "../../../../components/Button";
+import { useAppDispatch, useAppSelector } from "../../../../hooks/redux";
+import { cartActions } from "../../../../redux/Cart.store";
 
 import { Nav } from "./styles";
 
