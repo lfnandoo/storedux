@@ -1,4 +1,5 @@
 import { ProductInCart } from "../../../../types/products/product";
+import formatToBrl from "../../../../utils/formatToBrl";
 
 import * as Styles from "./styles";
 
@@ -15,6 +16,7 @@ export const Product: React.FC<IProduct> = ({
 }) => {
   const { amount } = item;
   const { name, price, image, id } = item.product;
+  const parsePrice = Number(price);
 
   const handleDecrementProduct = () => {
     if (amount > 1) {
@@ -33,7 +35,8 @@ export const Product: React.FC<IProduct> = ({
         <Styles.Info>
           <span>{name}</span>
           <p>
-            {price} x {amount} = <strong>${Number(price) * amount}</strong>
+            {formatToBrl(parsePrice)} x {amount} ={" "}
+            <strong>${formatToBrl(parsePrice * amount)}</strong>
           </p>
         </Styles.Info>
         <Styles.Actions>

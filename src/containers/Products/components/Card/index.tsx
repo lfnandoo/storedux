@@ -1,8 +1,7 @@
-import { useCallback } from "react";
-
 import { Skeleton } from "../../../../components/Skeleton";
 
 import { Product } from "../../../../types/products/product";
+import formatToBrl from "../../../../utils/formatToBrl";
 
 import * as Styles from "./styles";
 
@@ -26,7 +25,7 @@ export const Card: React.FC<ICard> = ({ item, onAddCart, isAdded }) => {
       <Styles.CardContent>
         <Styles.CardInfo>
           <h3>{name}</h3>
-          <strong>${price}</strong>
+          <strong>{formatToBrl(Number(price))}</strong>
         </Styles.CardInfo>
         <Styles.CardButton disabled={isAdded} onClick={handleAddCart}>
           {isAdded ? "Este Item já foi adicionado" : "Adicionar no carrinho"}
