@@ -1,5 +1,9 @@
 import { useCallback } from "react";
+
+import { Skeleton } from "../../../../components/Skeleton";
+
 import { Product } from "../../../../types/products/product";
+
 import * as Styles from "./styles";
 
 interface ICard {
@@ -7,7 +11,7 @@ interface ICard {
   onAddCart: (item: Product) => void;
 }
 
-const Card: React.FC<ICard> = ({ item, onAddCart }) => {
+export const Card: React.FC<ICard> = ({ item, onAddCart }) => {
   const { image, name, price } = item;
 
   const handleAddCart = useCallback(() => {
@@ -29,4 +33,12 @@ const Card: React.FC<ICard> = ({ item, onAddCart }) => {
   );
 };
 
-export default Card;
+export const CardShimmer: React.FC = () => {
+  return (
+    <Styles.CardContainer>
+      <Styles.CardImageShimmer>
+        <Skeleton />
+      </Styles.CardImageShimmer>
+    </Styles.CardContainer>
+  );
+};

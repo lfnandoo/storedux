@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
-    background-color: #dedede;
+    background-color: #f5f5f5;
     font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;

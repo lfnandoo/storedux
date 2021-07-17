@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 
-import Card from "./components/Card";
+import { Card, CardShimmer } from "./components/Card";
 
 import productResource from "../../services/resources/productResources";
 import { Product } from "../../types/products/product";
@@ -8,10 +8,10 @@ import { cartActions } from "../../redux/Cart.store";
 import { useAppDispatch } from "../../hooks/redux";
 
 import * as Styles from "./styles";
-import { DATA } from "../../mocks/data";
 
 export const Products: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -19,6 +19,7 @@ export const Products: React.FC = () => {
       try {
         const { data } = await productResource.getProducts();
         setProducts(data);
+        setIsLoading(false);
       } catch (e) {
         // tratar erros aqui <3
       }
@@ -36,10 +37,18 @@ export const Products: React.FC = () => {
 
   return (
     <Styles.ProductsList>
-      {DATA.map((item) => {
-        return <Card key={item.id} item={item} onAddCart={onAddCart} />;
-      })}
-      {products &&
+      {isLoading && !products.length && (
+        <>
+          <CardShimmer />
+          <CardShimmer />
+          <CardShimmer />
+          <CardShimmer />
+          <CardShimmer />
+          <CardShimmer />
+        </>
+      )}
+      {!isLoading &&
+        products.length &&
         products.map((item) => {
           return <Card key={item.id} item={item} onAddCart={onAddCart} />;
         })}
