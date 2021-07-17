@@ -2,7 +2,10 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --color-background: #dedede;
+    --color-background: #f5f5f5;
+    --color-white: #f5f5f5;
+    --color-main: #ff9696;
+    --color-secondary: #73a2da;
   }
 
   * {
@@ -13,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
-    background-color: #f5f5f5;
+    background-color: var(--color-background);
     font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -26,23 +29,23 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   strong {
-    color: #73a2da;
+    color: var(--color-secondary);
   }
 
   button {
     padding: 15px 20px;
 
-    background-color: #ff9696;
+    background-color: var(--color-main);
     border-radius: 5px;
-    color: #fff;
+    color: var(--color-white);
     font-weight: bold;
     border: 1px solid transparent;
     cursor: pointer;
   }
 
   button:hover {
-    color: #ff9696;
-    border: 1px solid #ff9696;
+    color: var(--color-main);
+    border: 1px solid var(--color-main);
     background-color: transparent;
     transition: 0.3s all;
   }

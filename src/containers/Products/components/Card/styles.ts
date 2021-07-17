@@ -4,7 +4,7 @@ export const CardContainer = styled.li`
   width: 100%;
   height: 346px;
 
-  background: #fff;
+  background: var(--color-white);
   border-radius: 15px;
 `;
 
@@ -20,7 +20,7 @@ export const CardImageShimmer = styled.div`
   width: 100%;
   height: 200px;
   
-  background-color: #fff;
+  background-color: var(--color-white);
   filter: brightness(95%);
 
   border-radius: 15px 15px 0 0;
