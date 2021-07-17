@@ -15,6 +15,10 @@ const RightSide = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  > div {
+    margin-right: 10px;
+  }
 `;
 
 export const Nav = {
