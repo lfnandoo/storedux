@@ -22,6 +22,12 @@ const cart = createSlice({
     },
     clear: (state) => {
       state.products = []
+    },
+    increment: (state, action: PayloadAction<string>) => {
+      state.products = state.products.map((item) => item.product.id === action.payload ? { ...item, amount: item.amount + 1 } : item)
+    },
+    decrement: (state, action: PayloadAction<string>) => {
+      state.products = state.products.map((item) => item.product.id === action.payload ? { ...item, amount: item.amount - 1 } : item)
     }
   }
 })

@@ -15,9 +15,9 @@ interface ICard {
 export const Card: React.FC<ICard> = ({ item, onAddCart, isAdded }) => {
   const { image, name, price } = item;
 
-  const handleAddCart = useCallback(() => {
+  const handleAddCart = () => {
     onAddCart(item);
-  }, [item, onAddCart]);
+  };
 
   return (
     <Styles.CardContainer>

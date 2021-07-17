@@ -4,7 +4,7 @@ import cartImg from "../../assets/shopping-cart-outline.svg";
 
 import * as Styles from "./styles";
 
-export const Cart = () => {
+export const CartLink = () => {
   const productsInCart = useAppSelector((state) => state.cart.products.length);
 
   if (productsInCart < 1) {
