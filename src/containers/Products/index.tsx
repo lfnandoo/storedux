@@ -1,11 +1,11 @@
-import { useState, useCallback, useEffect, useMemo } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 import { Card, CardShimmer } from "./components/Card";
 
 import productResource from "../../services/resources/productResources";
 import { Product } from "../../types/products/product";
 import { cartActions } from "../../redux/Cart.store";
-import { useAppDispatch } from "../../hooks/redux";
+import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 
 import * as Styles from "./styles";
 
@@ -13,6 +13,7 @@ export const Products: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const dispatch = useAppDispatch();
+  const cartProducts = useAppSelector((state) => state.cart.products);
 
   useEffect(() => {
     async function getData() {
@@ -35,6 +36,8 @@ export const Products: React.FC = () => {
     [dispatch]
   );
 
+  console.log(cartProducts);
+
   return (
     <Styles.ProductsList>
       {isLoading && !products.length && (
@@ -50,7 +53,22 @@ export const Products: React.FC = () => {
       {!isLoading &&
         products.length &&
         products.map((item) => {
-          return <Card key={item.id} item={item} onAddCart={onAddCart} />;
+          let isAdded = false;
+
+          if (cartProducts.length) {
+            isAdded = Boolean(
+              cartProducts.find((cartItem) => cartItem.product.id === item.id)
+            );
+          }
+
+          return (
+            <Card
+              key={item.id}
+              item={item}
+              onAddCart={onAddCart}
+              isAdded={isAdded}
+            />
+          );
         })}
     </Styles.ProductsList>
   );

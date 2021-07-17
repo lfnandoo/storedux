@@ -9,9 +9,10 @@ import * as Styles from "./styles";
 interface ICard {
   item: Product;
   onAddCart: (item: Product) => void;
+  isAdded: boolean;
 }
 
-export const Card: React.FC<ICard> = ({ item, onAddCart }) => {
+export const Card: React.FC<ICard> = ({ item, onAddCart, isAdded }) => {
   const { image, name, price } = item;
 
   const handleAddCart = useCallback(() => {
@@ -27,7 +28,9 @@ export const Card: React.FC<ICard> = ({ item, onAddCart }) => {
           <h3>{name}</h3>
           <strong>${price}</strong>
         </Styles.CardInfo>
-        <button onClick={handleAddCart}>Adicionar no carrinho</button>
+        <Styles.CardButton disabled={isAdded} onClick={handleAddCart}>
+          {isAdded ? "Este Item já foi adicionado" : "Adicionar no carrinho"}
+        </Styles.CardButton>
       </Styles.CardContent>
     </Styles.CardContainer>
   );

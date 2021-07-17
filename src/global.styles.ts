@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     --color-background: #f5f5f5;
     --color-white: #fff;
     --color-main: #ff9696;
+    --color-main-dark: #d14646;
     --color-secondary: #73a2da;
   }
 
@@ -30,23 +31,5 @@ export const GlobalStyle = createGlobalStyle`
 
   strong {
     color: var(--color-secondary);
-  }
-
-  button {
-    padding: 15px 20px;
-
-    background-color: var(--color-main);
-    border-radius: 5px;
-    color: var(--color-white);
-    font-weight: bold;
-    border: 1px solid transparent;
-    cursor: pointer;
-  }
-
-  button:hover {
-    color: var(--color-main);
-    border: 1px solid var(--color-main);
-    background-color: transparent;
-    transition: 0.3s all;
   }
 `;

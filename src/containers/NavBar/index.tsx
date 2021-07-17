@@ -1,3 +1,5 @@
+import { Button } from "../../components/Button";
+
 import { Nav } from "./styles";
 
 export const NavBar: React.FC = () => {
@@ -12,7 +14,7 @@ export const NavBar: React.FC = () => {
             Itens: <strong>0</strong>
           </h3>
         </div>
-        <button>Limpar tudo</button>
+        <Button>Limpar tudo</Button>
       </Nav.RightSide>
     </Nav.Container>
   );

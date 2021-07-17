@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Button } from '../../../../components/Button';
 
 export const CardContainer = styled.li`
   width: 100%;
@@ -39,4 +40,18 @@ export const CardContent = styled.div`
 export const CardInfo = styled.div`
   text-align: center;
   padding: 20px;
+`;
+
+interface ICardButton {
+  disabled: boolean
+}
+
+export const CardButton = styled(Button)<ICardButton>`
+  background-color: ${({ disabled }) => disabled ? 'var(--color-secondary)' : ''};
+  cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
+
+  &:hover {
+    background-color: ${({ disabled }) => disabled ? 'var(--color-secondary)' : ''};
+    border: ${({ disabled }) => disabled ? '1px solid var(--color-secondary)' : ''};
+  }
 `;
