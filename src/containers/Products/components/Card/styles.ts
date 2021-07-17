@@ -52,6 +52,5 @@ export const CardButton = styled(Button)<ICardButton>`
 
   &:hover {
     background-color: ${({ disabled }) => disabled ? 'var(--color-secondary)' : ''};
-    border: ${({ disabled }) => disabled ? '1px solid var(--color-secondary)' : ''};
   }
 `;

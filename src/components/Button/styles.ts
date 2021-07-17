@@ -9,9 +9,9 @@ export const Container = styled.button<ButtonHTMLAttributes<HTMLButtonElement>>`
   font-weight: bold;
   border: 1px solid transparent;
   cursor: pointer;
+  transition: 0.3s all;
 
   &:hover {
     background-color: var(--color-main-dark);
-    transition: 0.3s all;
   }
 `;
