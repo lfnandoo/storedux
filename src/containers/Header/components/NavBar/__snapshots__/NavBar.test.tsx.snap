@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar should render correctly 1`] = `
+<nav
+  className="sc-gtsrHT bDpdCY"
+>
+  <h1>
+    STO
+    <strong>
+      REDUX
+    </strong>
+  </h1>
+  <div
+    className="sc-dlnjwi AwWBE"
+  >
+    <div>
+      <h3>
+        Itens: 
+        <strong
+          data-testid="items-amount"
+        >
+          2
+        </strong>
+      </h3>
+    </div>
+    <button
+      className="sc-bdnxRM OPJfk"
+      data-testid="clear-all-button"
+      onClick={[MockFunction]}
+    >
+      Limpar tudo
+    </button>
+  </div>
+</nav>
+`;
