@@ -1,5 +1,10 @@
 import styled from 'styled-components';
+
 import { Button } from '../../../../components/Button';
+
+interface ICardButton {
+  disabled: boolean
+}
 
 export const CardContainer = styled.li`
   width: 100%;
@@ -25,6 +30,7 @@ export const CardImageShimmer = styled.div`
   filter: brightness(95%);
 
   border-radius: 15px 15px 0 0;
+
   div {
     border-radius: 15px 15px 0 0;
   }
@@ -40,11 +46,17 @@ export const CardContent = styled.div`
 export const CardInfo = styled.div`
   text-align: center;
   padding: 20px;
-`;
 
-interface ICardButton {
-  disabled: boolean
-}
+  h3 {
+    color: var(--color-main-dark);
+    font-weight: bold;
+  }
+
+  p {
+    color: rgba(0,0,0,.6);
+    margin: 5px 0 0 0;
+  }
+`;
 
 export const CardButton = styled(Button)<ICardButton>`
   background-color: ${({ disabled }) => disabled ? 'var(--color-secondary)' : ''};

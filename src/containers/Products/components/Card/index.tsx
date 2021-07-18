@@ -25,7 +25,7 @@ export const Card: React.FC<ICard> = ({ item, onAddCart, isAdded }) => {
       <Styles.CardContent>
         <Styles.CardInfo>
           <h3>{name}</h3>
-          <strong>{formatToBrl(Number(price))}</strong>
+          <p>{formatToBrl(Number(price))}</p>
         </Styles.CardInfo>
         <Styles.CardButton disabled={isAdded} onClick={handleAddCart}>
           {isAdded ? "Este Item já foi adicionado" : "Adicionar no carrinho"}
