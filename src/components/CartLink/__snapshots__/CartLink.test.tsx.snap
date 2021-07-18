@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartLink should render correctly 1`] = `
+<a
+  className="sc-bdnxRM cjgSfr"
+  data-testid="cart-btn"
+  href="/cart"
+  onClick={[Function]}
+>
+  <img
+    alt="cart"
+    src="shopping-cart-outline.svg"
+  />
+</a>
+`;
