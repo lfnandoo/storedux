@@ -37,13 +37,19 @@ export const Product: React.FC<IProduct> = (props) => {
           <span>{name}</span>
           <p>
             {formatToBrl(parsePrice)} x {amount} ={" "}
-            <strong>{formatToBrl(parsePrice * amount)}</strong>
+            <strong data-testid="formated-price">
+              {formatToBrl(parsePrice * amount)}
+            </strong>
           </p>
         </Styles.Info>
         <Styles.Actions>
-          <p onClick={handleDecrementProduct}>-</p>
+          <p data-testid="decrement-btn" onClick={handleDecrementProduct}>
+            -
+          </p>
           <span>{amount}</span>
-          <p onClick={handleIncrementProduct}>+</p>
+          <p data-testid="increment-btn" onClick={handleIncrementProduct}>
+            +
+          </p>
         </Styles.Actions>
       </Styles.Content>
     </Styles.Container>

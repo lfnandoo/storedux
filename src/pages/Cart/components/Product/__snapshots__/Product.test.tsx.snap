@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product should render correctly 1`] = `
+<div
+  className="sc-bdnxRM sqYLY"
+>
+  <img
+    alt="Luiz"
+    src="/"
+  />
+  <div
+    className="sc-gtsrHT dfOuWm"
+  >
+    <div
+      className="sc-dlnjwi dkElXw"
+    >
+      <span>
+        Luiz
+      </span>
+      <p>
+        R$ 350,32
+         x 
+        2
+         =
+         
+        <strong
+          data-testid="formated-price"
+        >
+          R$ 700,64
+        </strong>
+      </p>
+    </div>
+    <div
+      className="sc-hKFxyN dnHGfh"
+    >
+      <p
+        data-testid="decrement-btn"
+        onClick={[Function]}
+      >
+        -
+      </p>
+      <span>
+        2
+      </span>
+      <p
+        data-testid="increment-btn"
+        onClick={[Function]}
+      >
+        +
+      </p>
+    </div>
+  </div>
+</div>
+`;
