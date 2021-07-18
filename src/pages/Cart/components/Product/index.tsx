@@ -7,13 +7,12 @@ interface IProduct {
   item: ProductInCart;
   onDecrementProduct: (id: string) => void;
   onIncrementProduct: (id: string) => void;
+  onRemoveProduct: (id: string) => void;
 }
 
-export const Product: React.FC<IProduct> = ({
-  item,
-  onDecrementProduct,
-  onIncrementProduct,
-}) => {
+export const Product: React.FC<IProduct> = (props) => {
+  const { item, onDecrementProduct, onIncrementProduct, onRemoveProduct } =
+    props;
   const { amount } = item;
   const { name, price, image, id } = item.product;
   const parsePrice = Number(price);
@@ -21,6 +20,8 @@ export const Product: React.FC<IProduct> = ({
   const handleDecrementProduct = () => {
     if (amount > 1) {
       onDecrementProduct(id);
+    } else {
+      onRemoveProduct(id);
     }
   };
 
@@ -36,7 +37,7 @@ export const Product: React.FC<IProduct> = ({
           <span>{name}</span>
           <p>
             {formatToBrl(parsePrice)} x {amount} ={" "}
-            <strong>${formatToBrl(parsePrice * amount)}</strong>
+            <strong>{formatToBrl(parsePrice * amount)}</strong>
           </p>
         </Styles.Info>
         <Styles.Actions>

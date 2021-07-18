@@ -26,6 +26,13 @@ export const Cart = () => {
     [dispatch]
   );
 
+  const onRemoveProduct = useCallback(
+    (productId) => {
+      dispatch(cartActions.remove(productId));
+    },
+    [dispatch]
+  );
+
   return (
     <Styles.Container>
       <h1>Carrinho</h1>
@@ -36,6 +43,7 @@ export const Cart = () => {
               item={item}
               onIncrementProduct={onIncrementProduct}
               onDecrementProduct={onDecrementProduct}
+              onRemoveProduct={onRemoveProduct}
             />
           ))}
         </Styles.ProductList>
