@@ -2,14 +2,19 @@
 
 exports[`NavBar should render correctly 1`] = `
 <nav
-  className="sc-gtsrHT bDpdCY"
+  className="sc-gtsrHT johSdS"
 >
-  <h1>
-    STO
-    <strong>
-      REDUX
-    </strong>
-  </h1>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    <h1>
+      STO
+      <strong>
+        REDUX
+      </strong>
+    </h1>
+  </a>
   <div
     className="sc-dlnjwi AwWBE"
   >
