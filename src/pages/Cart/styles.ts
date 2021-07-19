@@ -52,6 +52,10 @@ export const Checkout = styled.div`
     margin: 2.5vh 0;
   }
 
+  span {
+    padding: 10px 0;
+  }
+
   > div {
     display: flex;
     justify-content: center;
