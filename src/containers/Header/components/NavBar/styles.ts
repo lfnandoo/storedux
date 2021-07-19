@@ -7,6 +7,11 @@ const Container = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  a {
+    text-decoration: none;
+    color: rgba(0,0,0,.7);
+  }
   `;
 
 const RightSide = styled.div`

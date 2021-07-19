@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { Button } from "../../../../components/Button";
 
 import { Nav } from "./styles";
@@ -10,9 +12,11 @@ interface INavBar {
 export const NavBar = ({ itemsAmount, onClearAll }: INavBar) => {
   return (
     <Nav.Container>
-      <h1>
-        STO<strong>REDUX</strong>
-      </h1>
+      <Link to="/">
+        <h1>
+          STO<strong>REDUX</strong>
+        </h1>
+      </Link>
       <Nav.RightSide>
         <div>
           <h3>
