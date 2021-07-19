@@ -46,6 +46,7 @@ export const Cart = () => {
         <Styles.ProductList>
           {productsInCart.map((item) => (
             <Product
+              key={item.product.id}
               item={item}
               onIncrementProduct={onIncrementProduct}
               onDecrementProduct={onDecrementProduct}
