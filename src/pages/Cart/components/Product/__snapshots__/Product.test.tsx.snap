@@ -12,7 +12,7 @@ exports[`Product should render correctly 1`] = `
     className="sc-gtsrHT dfOuWm"
   >
     <div
-      className="sc-dlnjwi dkElXw"
+      className="sc-dlnjwi VCOiA"
     >
       <span>
         Luiz
@@ -31,7 +31,7 @@ exports[`Product should render correctly 1`] = `
       </p>
     </div>
     <div
-      className="sc-hKFxyN dnHGfh"
+      className="sc-hKFxyN bbrNVV"
     >
       <p
         data-testid="decrement-btn"
