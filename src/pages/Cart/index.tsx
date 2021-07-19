@@ -1,9 +1,9 @@
-import { useCallback } from "react";
+import { useCallback, useMemo } from "react";
 
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { cartActions } from "../../redux/Cart.store";
+import formatToBrl from "../../utils/formatToBrl";
 
-import { Button } from "../../components/Button";
 import { Product } from "./components/Product";
 
 import * as Styles from "./styles";
@@ -33,6 +33,17 @@ export const Cart = () => {
     [dispatch]
   );
 
+  const calcItemsInCart = useMemo(() => {
+    let total = 0;
+
+    productsInCart.forEach((item) => {
+      const price = item.amount * Number(item.product.price);
+      total = total + price;
+    });
+
+    return total;
+  }, [productsInCart]);
+
   return (
     <Styles.Container>
       <h1>Carrinho</h1>
@@ -48,7 +59,10 @@ export const Cart = () => {
           ))}
         </Styles.ProductList>
         <Styles.Checkout>
-          <Button>Fazer checkout ➡</Button>
+          <div>
+            <span>{formatToBrl(calcItemsInCart)}</span>
+          </div>
+          <Styles.Button>Continuar ➡</Styles.Button>
         </Styles.Checkout>
       </section>
     </Styles.Container>
