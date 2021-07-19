@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import { Button as DefaultButton } from "../../components/Button";
 
 export const Container = styled.div`
@@ -21,9 +21,8 @@ export const Container = styled.div`
     padding: 2.5vh 0;
     border-top: 1px solid var(--color-white);
 
-    @media(max-width: 600px) {
+    @media (max-width: 600px) {
       flex-direction: column;
-
     }
   }
 `;
@@ -36,7 +35,7 @@ export const ProductList = styled.ul`
   max-height: 60vh;
   overflow: auto;
 
-  @media(max-width: 600px) {
+  @media (max-width: 600px) {
     width: 100%;
   }
 `;
@@ -73,4 +72,4 @@ export const Button = styled(DefaultButton)`
   width: 100%;
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
-`
+`;

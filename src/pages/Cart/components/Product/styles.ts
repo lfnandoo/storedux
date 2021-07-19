@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -32,11 +32,11 @@ export const Info = styled.div`
 
   p {
     color: rgba(0, 0, 0, 0.5);
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 
   strong {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -48,7 +48,7 @@ export const Actions = styled.div`
 
   span {
     margin: 0 10px;
-    color: rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.8);
   }
 
   p {

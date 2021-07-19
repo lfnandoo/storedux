@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { ButtonHTMLAttributes } from 'react';
+import styled from "styled-components";
+import { ButtonHTMLAttributes } from "react";
 
 export const Container = styled.button<ButtonHTMLAttributes<HTMLButtonElement>>`
   padding: 15px 20px;

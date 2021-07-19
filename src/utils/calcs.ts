@@ -1,15 +1,15 @@
-import { ProductInCart } from '../types/products/product';
+import { ProductInCart } from "../types/products/product";
 
 export const calcTotalPrice = (products: ProductInCart[]) => {
   let total = 0;
 
   products.forEach((item: ProductInCart) => {
-      const price = item.amount * Number(item.product.price);
-      total = total + price;
-    });
+    const price = item.amount * Number(item.product.price);
+    total = total + price;
+  });
 
   return total;
-}
+};
 
 export const calcItemsAmount = (products: ProductInCart[]) => {
   let amount = 0;
@@ -18,5 +18,5 @@ export const calcItemsAmount = (products: ProductInCart[]) => {
     amount = amount + item.amount;
   });
 
-    return amount;
-}
+  return amount;
+};

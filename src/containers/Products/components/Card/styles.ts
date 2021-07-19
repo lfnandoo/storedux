@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { Button } from '../../../../components/Button';
+import { Button } from "../../../../components/Button";
 
 interface ICardButton {
-  disabled: boolean
+  disabled: boolean;
 }
 
 export const CardContainer = styled.li`
@@ -25,7 +25,7 @@ export const CardImage = styled.img`
 export const CardImageShimmer = styled.div`
   width: 100%;
   height: 200px;
-  
+
   background-color: var(--color-white);
   filter: brightness(95%);
 
@@ -53,16 +53,18 @@ export const CardInfo = styled.div`
   }
 
   p {
-    color: rgba(0,0,0,.6);
+    color: rgba(0, 0, 0, 0.6);
     margin: 5px 0 0 0;
   }
 `;
 
 export const CardButton = styled(Button)<ICardButton>`
-  background-color: ${({ disabled }) => disabled ? 'var(--color-secondary)' : ''};
-  cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
+  background-color: ${({ disabled }) =>
+    disabled ? "var(--color-secondary)" : ""};
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
 
   &:hover {
-    background-color: ${({ disabled }) => disabled ? 'var(--color-secondary)' : ''};
+    background-color: ${({ disabled }) =>
+      disabled ? "var(--color-secondary)" : ""};
   }
 `;
