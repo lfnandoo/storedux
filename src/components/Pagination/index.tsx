@@ -23,11 +23,19 @@ export const Pagination = memo(
 
     return (
       <Styles.Container>
-        <Button disabled={page < 1} onClick={handlePrevPage}>
+        <Button
+          data-testid="prev-btn"
+          disabled={page < 1}
+          onClick={handlePrevPage}
+        >
           Anterior
         </Button>
-        <p>{currentPage}</p>
-        <Button disabled={amount === currentPage} onClick={handleNextPage}>
+        <p data-testid="current-page">{currentPage}</p>
+        <Button
+          data-testid="next-btn"
+          disabled={amount === currentPage}
+          onClick={handleNextPage}
+        >
           Próxima
         </Button>
       </Styles.Container>

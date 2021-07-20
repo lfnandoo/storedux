@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination should render correctly 1`] = `
+<div
+  className="sc-gtsrHT ePUhsz"
+>
+  <button
+    className="sc-bdnxRM OPJfk"
+    data-testid="prev-btn"
+    disabled={true}
+    onClick={[Function]}
+  >
+    Anterior
+  </button>
+  <p
+    data-testid="current-page"
+  >
+    1
+  </p>
+  <button
+    className="sc-bdnxRM OPJfk"
+    data-testid="next-btn"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Próxima
+  </button>
+</div>
+`;
