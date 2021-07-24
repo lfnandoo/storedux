@@ -1,5 +1,5 @@
 <h4 align="center">
-  🚀 Storedux - Liven
+  🚀 Storedux
 </h4>
 <h4 align="center">
  🔥 <a href="https://lucid-varahamihira-0f520f.netlify.app/">Demo</a>
